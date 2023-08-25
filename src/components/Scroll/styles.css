@@ -52,20 +52,7 @@ body {
   
 
   
-  .h2__scroll {
-    margin: 0;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: var(--cyan-400);
-    filter: drop-shadow(0 0 10px rgb(103, 232, 249));
-    color: var(--accent);
-    left: calc(50% - 56vw + 50%);
-    font-size: 56px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    line-height: 1.2;
-    position: absolute;
-  }
+
   
   .section__scroll {
     height: 100vh;
@@ -107,8 +94,34 @@ body {
     right: 0;
     height: 10px;
     background: var(--cyan-dark);
-    bottom: 10px;
+    bottom: 0px;
   }
   
-
 /* dark progress */
+
+
+.h2__scroll {
+  margin: 0;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--cyan-400);
+  filter: drop-shadow(0 0 10px rgb(103, 232, 249));
+  color: var(--accent);
+  left: calc(50% - 65vw + 50%);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  position: absolute;
+}
+
+
+
+
+@media only screen and (min-width: 600px) {
+  .h2__scroll {
+    left: calc(50% - 56vw + 50%);
+    font-size: 56px;
+   
+  }
+}
