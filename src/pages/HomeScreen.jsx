@@ -37,7 +37,7 @@ export const HomeScreen = () => {
                             </section>
                             <motion.div
                                 ref={constraintsRef}
-                                className='flex place-content-center place-items-center overflow-hidden'
+                                className='flex place-items-center overflow-hidden'
                             >
                                 <motion.div
 

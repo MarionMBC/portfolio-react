@@ -8,8 +8,7 @@ import {
     motion,
     useScroll,
     useSpring,
-    useTransform,
-    MotionValue
+    useTransform
 } from "framer-motion";
 
 function useParallax(value, distance) {
@@ -22,9 +21,9 @@ function Image({ id, name, img }) {
     const y = useParallax(scrollYProgress, 300);
 
     return (
-        <section className="section__scroll ">
+        <section className="section__scroll">
             <div ref={ref}>
-                <img className="img__scroll" src={img} alt="A London skyscraper" />
+                <img className="img__scroll rounded-xl" src={img} alt="A London skyscraper" />
             </div>
             <motion.h2 className="h2__scroll" style={{ y }}>{name}</motion.h2>
         </section>
