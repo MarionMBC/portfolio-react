@@ -5,8 +5,9 @@ import { SiFirebase, SiGithub, SiLinkedin, SiTailwindcss } from 'react-icons/si'
 import img2 from '../img/code1.svg'
 
 import { motion } from 'framer-motion'
-import { useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import AppParallax from '../components/Scroll/ImageScroll'
+import CustomizedTimeline from '../components/TimeLine/TimeLine'
 export const HomeScreen = () => {
     const constraintsRef = useRef(null);
 
@@ -29,7 +30,7 @@ export const HomeScreen = () => {
                                     software solutions. I am deeply passionate about software development.
                                 </p>
                                 <p className='break-words mt-2'>
-                                    Over the past two years, I have gained extensive experience working
+                                    Over the past two years, I have gained extensive <span className='text-cyan-300'>experience</span>. working
                                     with a broad range of web technologies, which has equipped
                                     me with valuable skills for approaching new challenges
                                     and creating innovative solutions in the future.
@@ -44,8 +45,7 @@ export const HomeScreen = () => {
                                     drag dragConstraints={constraintsRef}
                                 >
                                     <button
-                                        onClick={() => navigate('/contact')}
-
+                                        onDrag={() => navigate('/contact')}
                                         className='m-5 text-xl px-3 py-2 border  hover:bg-cyan-500 flex transition-all border-cyan-300 rounded ease-linear hover:duration-150 hover:scale-105'>Contact me!</button>
                                 </motion.div>
                             </motion.div>
@@ -95,9 +95,11 @@ export const HomeScreen = () => {
                 </div>
 
                 <p className='px-5 lg:px-40 text-2xl text-cyan-300'>Projects</p>
-               <AppParallax/>
+                <AppParallax />
 
-      {/*           <div className='flex justify-center h-96 mt-10 mb-10 relative bg-black '>
+
+
+                {/*           <div className='flex justify-center h-96 mt-10 mb-10 relative bg-black '>
                     <img className='md:absolute h-72 right-28 col-span-1 md:h-96 md:w-[600px] object-cover animate-pulse' alt='...' src={layeredStep} />
                     <div className=''>
                         <div className='absolute group left-1/2 top-1/4'>
@@ -128,19 +130,19 @@ export const HomeScreen = () => {
 
 
             </main>
-
-
-            <div className='flex py-72 mb-3 space-y-2 pb-10 flex-col justify-center items-center h-20 bg-gray-900 text-white'>
-                    <div className='flex justify-center items-center'>
-                        <p className='text-lg'>Marion Bustamante</p>
-                        <p className='text-lg mx-2'>|</p>
-                        <p className='text-lg'>{new Date().getFullYear()}</p>
-                    </div>
-                    <div className='flex justify-center items-center'>
-                        <SiLinkedin className='text-3xl mx-2 cursor-pointer' />
-                        <SiGithub className='text-3xl mx-2 cursor-pointer' />
-                    </div>
+            <footer className='flex py-10 space-y-2 flex-col justify-center items-center dark:bg-gray-900 bg-white dark:text-white'>
+                <div className='flex justify-center items-center'>
+                    <p className='text-lg'>Marion Bustamante</p>
+                    <p className='text-lg mx-2'>|</p>
+                    <p className='text-lg'>{new Date().getFullYear()}</p>
                 </div>
+                <div className='flex justify-center items-center'>
+                    <SiLinkedin className='text-3xl mx-2 cursor-pointer' />
+                    <SiGithub className='text-3xl mx-2 cursor-pointer' />
+                </div>
+            </footer>
+
+
         </>
     )
 }

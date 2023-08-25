@@ -7,7 +7,7 @@ import { AppRouter } from './Routes/AppRouter';
 function App() {
   const [darkToggle, setDarkToggle] = useState(false)
   return (
-    <div className={`bg-blue-400 dark:bg-red-300 ${darkToggle && 'dark'}`}>
+    <div className={`dark:bg-gray-900 bg-white ${darkToggle && 'dark'}`}>
       <NavBar setDarkToggle={setDarkToggle} darkToggle={darkToggle} />
       
       <AppRouter />
