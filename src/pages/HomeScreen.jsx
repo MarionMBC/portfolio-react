@@ -5,9 +5,8 @@ import { SiFirebase, SiGithub, SiLinkedin, SiTailwindcss } from 'react-icons/si'
 import img2 from '../img/code1.svg'
 
 import { motion } from 'framer-motion'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import AppParallax from '../components/Scroll/ImageScroll'
-import CustomizedTimeline from '../components/TimeLine/TimeLine'
 export const HomeScreen = () => {
     const constraintsRef = useRef(null);
 
