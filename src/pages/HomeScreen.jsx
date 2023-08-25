@@ -3,7 +3,6 @@ import { AiFillGithub } from 'react-icons/ai'
 import { DiBootstrap, DiCss3, DiHtml5, DiJavascript, DiMsqlServer, DiMysql, DiNodejs, DiPython, DiReact } from 'react-icons/di'
 import { SiFirebase, SiGithub, SiLinkedin, SiTailwindcss } from 'react-icons/si'
 import img2 from '../img/code1.svg'
-import layeredStep from '../img/bricks.png'
 
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
@@ -131,7 +130,7 @@ export const HomeScreen = () => {
             </main>
 
 
-            <div className='flex space-y-2 pb-10 flex-col justify-center items-center h-20 bg-gray-900 text-white'>
+            <div className='flex py-72 mb-3 space-y-2 pb-10 flex-col justify-center items-center h-20 bg-gray-900 text-white'>
                     <div className='flex justify-center items-center'>
                         <p className='text-lg'>Marion Bustamante</p>
                         <p className='text-lg mx-2'>|</p>
