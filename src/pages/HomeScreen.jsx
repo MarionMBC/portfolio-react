@@ -3,11 +3,11 @@ import { AiFillGithub } from 'react-icons/ai'
 import { DiBootstrap, DiCss3, DiHtml5, DiJavascript, DiMsqlServer, DiMysql, DiNodejs, DiPython, DiReact } from 'react-icons/di'
 import { SiFirebase, SiGithub, SiLinkedin, SiTailwindcss } from 'react-icons/si'
 import img2 from '../img/code1.svg'
-import layeredStep from '../img/layered-step-2.1.svg'
-import syncPro from '../img/Syncpro.png'
-import heroes from '../img/heroes.png'
+import layeredStep from '../img/bricks.png'
+
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
+import AppParallax from '../components/Scroll/ImageScroll'
 export const HomeScreen = () => {
     const constraintsRef = useRef(null);
 
@@ -96,12 +96,16 @@ export const HomeScreen = () => {
                 </div>
 
                 <p className='px-5 lg:px-40 text-2xl text-cyan-300'>Projects</p>
-                <div className='grid grid-cols-1 h-96 mt-10 mb-20 bg-black relative'>
-                    <img className='absolute right-20 col-span-1 md:w-screen md:h-96 object-cover animate-pulse' alt='...' src={layeredStep} />
-                    {/* <div className='group flex justify-center'>
-                        <img alt='' className="absolute group-hover:backdrop-blur-lg shadow-2xl shadow-cyan-950  h-52 rotate-12 top-9 md:top-32 md:group-hover:h-full group-hover:right-10 group-hover:top-8 group-hover:rotate-0 transition-all ease-in-out right-64 duration-700  font-bold" src={journal}></img>
-                        <span className='absolute scale-0 rounded-full px-10 py-3 text-xl bg-gray-900 hover:bg-blue-900 text-white cursor-pointer group-hover:scale-100 right-80 transition-all hover:shadow-lg hover:shadow-cyan-900 top-52' >Visit</span>
-                    </div> */}
+               <AppParallax/>
+
+      {/*           <div className='flex justify-center h-96 mt-10 mb-10 relative bg-black '>
+                    <img className='md:absolute h-72 right-28 col-span-1 md:h-96 md:w-[600px] object-cover animate-pulse' alt='...' src={layeredStep} />
+                    <div className=''>
+                        <div className='absolute group left-1/2 top-1/4'>
+                            <img alt='' className="relative flex -left-1/2 -top-1/2 md:left-1/2 group-hover:backdrop-blur-lg shadow-2xl sm:h-52 shadow-cyan-950 rotate-12 md:top-32 md:group-hover:h-full group-hover:right-10 group-hover:rotate-0 transition-all ease-in-out duration-700  font-bold" src={journal}></img>
+                            <span className='absolute  group-hover:block -left-1/4 top-1/3  rounded-full px-10 py-3 text-xl bg-gray-900 hover:bg-blue-900 text-white cursor-pointer group-hover:scale-100  transition-all hover:shadow-lg hover:shadow-cyan-900' >Visit</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div className='h-96 mb-10 relative'>
@@ -115,21 +119,19 @@ export const HomeScreen = () => {
                 <div className='h-96 mb-20 relative'>
 
                     <img className='w-screen h-96 object-cover animate-pulse' alt='...' src={layeredStep} />
-                    {/*                     <span className='absolute text-cyan-300 font-medium delay-700 animate-pulse duration-700 text-xl right-[615px] top-14'>Hover Me!</span>
- */}
+         
                     <div className='group'>
                         <img alt='' className="absolute group-hover:backdrop-blur-lg shadow-2xl shadow-cyan-950  h-52 rotate-12 top-32 group-hover:h-full group-hover:right-10 group-hover:top-8 group-hover:rotate-0 transition-all ease-in-out right-64 duration-700  font-bold" src={syncPro}></img>
                         <span className='absolute scale-0 rounded-full px-10 py-3 text-xl bg-gray-900 hover:bg-blue-900 text-white cursor-pointer group-hover:scale-100 right-80 transition-all hover:shadow-lg hover:shadow-cyan-900 top-52' >Visit</span>
                     </div>
-                </div>
+                </div> */}
 
 
 
             </main>
 
 
-            <footer>
-                <div className='flex space-y-2 pb-10 flex-col justify-center items-center h-20 bg-gray-900 text-white'>
+            <div className='flex space-y-2 pb-10 flex-col justify-center items-center h-20 bg-gray-900 text-white'>
                     <div className='flex justify-center items-center'>
                         <p className='text-lg'>Marion Bustamante</p>
                         <p className='text-lg mx-2'>|</p>
@@ -140,7 +142,6 @@ export const HomeScreen = () => {
                         <SiGithub className='text-3xl mx-2 cursor-pointer' />
                     </div>
                 </div>
-            </footer>
         </>
     )
 }
