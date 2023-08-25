@@ -1,29 +1,24 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import { AiFillGithub } from 'react-icons/ai'
 import { DiBootstrap, DiCss3, DiHtml5, DiJavascript, DiMsqlServer, DiMysql, DiNodejs, DiPython, DiReact } from 'react-icons/di'
 import { SiFirebase, SiGithub, SiLinkedin, SiTailwindcss } from 'react-icons/si'
 import img2 from '../img/code1.svg'
 import layeredStep from '../img/layered-step-2.1.svg'
-import journal from '../img/journal.png'
 import syncPro from '../img/Syncpro.png'
 import heroes from '../img/heroes.png'
 import { motion } from 'framer-motion'
-import { Link, Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 export const HomeScreen = () => {
     const constraintsRef = useRef(null);
 
     const navigate = useNavigate()
 
-
-   
-
-
     return (
         <>
-            <main className='h-fit  overflow-hidden bg-white dark:bg-gray-900 dark:text-white'>
+            <main className='h-fit overflow-hidden bg-white dark:bg-gray-900 dark:text-white'>
                 <div className='px-5 mt-10 lg:px-40'>
-                    <div className='grid grid-cols-2 items-center justify-between'>
-                        <div>
+                    <div className='grid-cols-1 grid md:grid-cols-2 items-center justify-between'>
+                        <div className=''>
                             <p className='text-5xl mb-5 dark:text-cyan-300'>
                                 Hi
                             </p>
@@ -49,10 +44,10 @@ export const HomeScreen = () => {
 
                                     drag dragConstraints={constraintsRef}
                                 >
-                                    <button 
-                                    onClick={()=>navigate('/contact')}
-                                
-                                     className='m-5 text-xl px-3 py-2 border  hover:bg-cyan-500 flex transition-all border-cyan-300 rounded ease-linear hover:duration-150 hover:scale-105'>Contact me!</button>
+                                    <button
+                                        onClick={() => navigate('/contact')}
+
+                                        className='m-5 text-xl px-3 py-2 border  hover:bg-cyan-500 flex transition-all border-cyan-300 rounded ease-linear hover:duration-150 hover:scale-105'>Contact me!</button>
                                 </motion.div>
                             </motion.div>
                         </div>
@@ -100,15 +95,13 @@ export const HomeScreen = () => {
                     </div>
                 </div>
 
-                <div className='h-96 mt-10 mb-20 relative'>
-                    <p className='px-5 lg:px-40 text-2xl text-cyan-300'>Projects</p>
-                    <img className='w-screen h-96 object-cover animate-pulse' alt='...' src={layeredStep} />
-                    {/*                     <span className='absolute text-cyan-300 font-medium delay-700 animate-pulse duration-700 text-xl right-[615px] top-14'>Hover Me!</span>
- */}
-                    <div className='group'>
-                        <img alt='' className="absolute group-hover:backdrop-blur-lg shadow-2xl shadow-cyan-950  h-52 rotate-12 top-32 group-hover:h-full group-hover:right-10 group-hover:top-8 group-hover:rotate-0 transition-all ease-in-out right-64 duration-700  font-bold" src={journal}></img>
+                <p className='px-5 lg:px-40 text-2xl text-cyan-300'>Projects</p>
+                <div className='grid grid-cols-1 h-96 mt-10 mb-20 bg-black relative'>
+                    <img className='absolute right-20 col-span-1 md:w-screen md:h-96 object-cover animate-pulse' alt='...' src={layeredStep} />
+                    {/* <div className='group flex justify-center'>
+                        <img alt='' className="absolute group-hover:backdrop-blur-lg shadow-2xl shadow-cyan-950  h-52 rotate-12 top-9 md:top-32 md:group-hover:h-full group-hover:right-10 group-hover:top-8 group-hover:rotate-0 transition-all ease-in-out right-64 duration-700  font-bold" src={journal}></img>
                         <span className='absolute scale-0 rounded-full px-10 py-3 text-xl bg-gray-900 hover:bg-blue-900 text-white cursor-pointer group-hover:scale-100 right-80 transition-all hover:shadow-lg hover:shadow-cyan-900 top-52' >Visit</span>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className='h-96 mb-10 relative'>
@@ -120,7 +113,7 @@ export const HomeScreen = () => {
                 </div>
 
                 <div className='h-96 mb-20 relative'>
-                    
+
                     <img className='w-screen h-96 object-cover animate-pulse' alt='...' src={layeredStep} />
                     {/*                     <span className='absolute text-cyan-300 font-medium delay-700 animate-pulse duration-700 text-xl right-[615px] top-14'>Hover Me!</span>
  */}
@@ -129,8 +122,8 @@ export const HomeScreen = () => {
                         <span className='absolute scale-0 rounded-full px-10 py-3 text-xl bg-gray-900 hover:bg-blue-900 text-white cursor-pointer group-hover:scale-100 right-80 transition-all hover:shadow-lg hover:shadow-cyan-900 top-52' >Visit</span>
                     </div>
                 </div>
-                
-                
+
+
 
             </main>
 

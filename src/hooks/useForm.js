@@ -45,11 +45,11 @@ export const useForm = (initialState = {}) => {
 		setFormState({ ...formState, [target.name]: target.files});
 	}
 
-	 const handleInputCheck = ({ target }) => {
+	/*  const handleInputCheck = ({ target }) => {
 		console.log(target.checked);
 		const value = target.checked ? 1 : 0; // Convertir true a 1 y false a 0
 		return value;
-	}
+	} */
 
 	const reset = (newFormState = initialState) => {
 		setFormState(newFormState);

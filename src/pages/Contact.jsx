@@ -1,8 +1,9 @@
-import {motion, useIsPresent, useScroll, useSpring } from "framer-motion";
+/* import {motion, useIsPresent, useScroll, useSpring } from "framer-motion";
+ */
 import React from "react";
 export default function Contact() {
 
-    const { scrollYProgress } = useScroll();
+/*     const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
@@ -10,9 +11,9 @@ export default function Contact() {
   });
     const isPresent = useIsPresent();
 
+ */
 
 
-    
     return (
         <>
             <div className="py-4 lg:py-8  relative bg-gray-900">
@@ -69,13 +70,7 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-            <motion.div
-        initial={{ scaleX: 1 }}
-        animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
-        exit={{ scaleX: 1, transition: { duration: 0.5, ease: "circIn" } }}
-        style={{ originX: isPresent ? 0 : 1 }}
-        className="privacy-screen"
-      />
+          
         </>
     );
 }
