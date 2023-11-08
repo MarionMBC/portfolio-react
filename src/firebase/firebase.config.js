@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -16,4 +17,56 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+
+
+// Reference messages collection
+var messagesRef = app.database().ref('messages');
+
+
+// Listen for form submit
+document.getElementById('contactForm').addEventListener('submit', submitForm);
+
+// Submit form
+export function submitForm(e){
+  e.preventDefault();
+
+  //Get value
+  var name = getInputVal('name');
+  var email = getInputVal('email');
+  var message = getInputVal('message');
+
+  // Save message
+  saveMessage(name, email, message);
+
+/*   // Show alert
+  document.querySelector('.alert').style.display = 'block';
+
+  // Hide alert after 3 seconds
+  setTimeout(function(){
+    document.querySelector('.alert').style.display = 'none';
+  },3000); */
+
+  // Clear form
+  document.getElementById('contactForm').reset();
+}
+
+// Function to get form value
+function getInputVal(id){
+  return document.getElementById(id).value;
+}
+
+// Save message to firebase
+function saveMessage(name, email, message){
+  var newMessageRef = messagesRef.push();
+  newMessageRef.set({
+    name: name,
+   
+    email: email,
+
+    message: message
+  });
+}
+
+
 export default app;
+
